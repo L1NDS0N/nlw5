@@ -8,6 +8,7 @@ import "rc-slider/assets/index.css";
 export function Player() {
   const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
   const episode = episodeList[currentEpisodeIndex];
+
   return (
     <div className={styles.playerContainer}>
       <header>
@@ -47,6 +48,8 @@ export function Player() {
           </div>
           <span>00:00</span>
         </div>
+
+        {episode && <audio src={episode.url} autoPlay />}
 
         <div className={styles.buttons}>
           <button type="button" disabled={!episode}>
