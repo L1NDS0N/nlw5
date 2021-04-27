@@ -1,6 +1,7 @@
 import { createContext } from "react";
 
 type Episode = {
+  id: string;
   title: string;
   members: string;
   thumbnail: string;
